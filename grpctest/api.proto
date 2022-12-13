@@ -1,0 +1,9 @@
+syntax = "proto3";
+option go_package = "github.com/10gen/grpctest";
+service Example {
+    rpc Ping(PingRequest) returns(PingStatus) {}
+}
+message PingRequest {}
+message PingStatus {
+    string status = 1;
+}
